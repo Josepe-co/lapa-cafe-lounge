@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú — LAPA Café-Lounge</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ HEADER MENÚ ═══ -->
+  <header class="menu-header">
+    <div class="menu-header-inner">
+      <div class="menu-logo">
+        <img src="icono-flotante.png" alt="LAPA icon" class="menu-header-icon" />
+        <div>
+          <span class="mh-brand">LAPA</span>
+          <span class="mh-sub">Café · Lounge</span>
+        </div>
+      </div>
+      <div class="menu-header-badge">Menú Digital</div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ BANNER EVENTOS ═══ -->
+  <div class="menu-eventos-bar">
+    <div class="meb-inner">
+      <span class="meb-tag">🔥 PRÓXIMOS EVENTOS</span>
+      <div class="meb-scroll">
+        <span>⚽ Sábado · Clásico Nacional en Pantalla Gigante · 8 PM</span>
+        <span class="sep">|</span>
+        <span>🎸 Viernes · Música en Vivo · 8:00 PM</span>
+        <span class="sep">|</span>
+        <span>🏅 Happy Hour · L-V · 5:00 – 7:00 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CATEGORÍAS (pills) ═══ -->
+  <div class="cat-bar" id="catBar">
+    <div class="cat-inner">
+      <button class="cat-pill active" data-cat="cafeteria">☕ Cafetería</button>
+      <button class="cat-pill" data-cat="food">🍔 Snacks y Comidas</button>
+      <button class="cat-pill" data-cat="wings">🍗 Alitas</button>
+      <button class="cat-pill" data-cat="bar">🍻 Barra Libre</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ MENÚ PRINCIPAL ═══ -->
+  <main class="menu-main">
+
+    <!-- ─────────────────────────── ☕ CAFETERÍA ─────── -->
+    <section class="menu-section" data-cat="cafeteria" id="sec-cafeteria">
+
+      <div class="menu-section-header">
+        <span class="msh-icon">☕</span>
+        <div>
+          <h2 class="msh-title">CAFETERÍA</h2>
+          <p class="msh-sub">Bebidas calientes y frías de especialidad</p>
+        </div>
+      </div>
+
+      <!-- Bebidas Calientes -->
+      <h3 class="subsection-title">BEBIDAS CALIENTES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-id="cafe-americano" data-name="Café Americano" data-price="20" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Café Americano</div>
+            <div class="pc-price">$20</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cafe-americano','Café Americano',20)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="espresso" data-name="Café Espresso" data-price="20" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Café Espresso</div>
+            <div class="pc-price">$20</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('espresso','Café Espresso',20)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="cortado" data-name="Espresso Cortado" data-price="20" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Espresso Cortado</div>
+            <div class="pc-price">$20</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cortado','Espresso Cortado',20)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="doble-esp" data-name="Doble Espresso" data-price="22" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Doble Espresso</div>
+            <div class="pc-price">$22</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('doble-esp','Doble Espresso',22)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="doble-esp-c" data-name="Doble Espresso Cortado" data-price="24" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Doble Espresso Cortado</div>
+            <div class="pc-price">$24</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('doble-esp-c','Doble Espresso Cortado',24)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="latte" data-name="Café Latte" data-price="30" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Café Latte</div>
+            <div class="pc-price">$30</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('latte','Café Latte',30)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-id="capuccino" data-name="Capuccino" data-price="30" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Capuccino</div>
+            <div class="pc-price">$30</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('capuccino','Capuccino',30)">+ Agregar</button>
+        </div>
+        <!-- Capuccino de Sabores — abre modal de variante -->
+        <div class="product-card product-card--variant" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Capuccino de Sabores</div>
+            <div class="pc-desc">Cajeta · Moka · Rompope · Vainilla</div>
+            <div class="pc-price">$27</div>
+          </div>
+          <button class="btn-add btn-variant" onclick="openVariantModal('cap-sabor','Capuccino de Sabores',27,['Cajeta','Moka','Rompope','Vainilla'])">Elegir sabor</button>
+        </div>
+      </div>
+
+      <!-- Bebidas Frías -->
+      <h3 class="subsection-title" style="margin-top:40px">BEBIDAS FRÍAS</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Cappuccino Frappe</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cap-frappe','Cappuccino Frappe',50)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Moka Frappe</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('moka-f','Moka Frappe',50)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--hot" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Cappuccino Frappe de Oreo</div>
+            <div class="pc-badge">⭐ Favorito</div>
+            <div class="pc-price">$55</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cap-oreo','Cappuccino Frappe de Oreo',55)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Cappuccino Frappe de Cajeta</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cap-cajeta','Cappuccino Frappe de Cajeta',50)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Cappuccino Frappe de Caramelo</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cap-caramelo','Cappuccino Frappe de Caramelo',50)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--hot" data-cat="cafeteria">
+          <div class="pc-icon">🧋</div>
+          <div class="pc-body">
+            <div class="pc-name">Moka Frappe de Oreo</div>
+            <div class="pc-badge">🔥 Top</div>
+            <div class="pc-price">$55</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('moka-oreo','Moka Frappe de Oreo',55)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="cafeteria">
+          <div class="pc-icon">☕</div>
+          <div class="pc-body">
+            <div class="pc-name">Affogato</div>
+            <div class="pc-desc">Espresso sobre helado de vainilla</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('affogato','Affogato',50)">+ Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── 🍔 SNACKS Y COMIDAS ─────── -->
+    <section class="menu-section hidden" data-cat="food" id="sec-food">
+
+      <div class="menu-section-header">
+        <span class="msh-icon">🍔</span>
+        <div>
+          <h2 class="msh-title">SNACKS Y COMIDAS</h2>
+          <p class="msh-sub">Sándwiches, hamburguesas, cortes y mucho más</p>
+        </div>
+      </div>
+
+      <!-- HAMBURGUESAS -->
+      <h3 class="subsection-title">HAMBURGUESAS</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍔</div>
+          <div class="pc-body">
+            <div class="pc-name">Hamburguesa Artesana</div>
+            <div class="pc-desc">Quesos, vegetales, carne, tocino, jamón de pierna, cebollitas caramelizadas y papas corte gajo</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('h-artesana','Hamburguesa Artesana',80)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--hot" data-cat="food">
+          <div class="pc-icon">🍔</div>
+          <div class="pc-body">
+        <div class="pc-name">Hamburguesa LAPA</div>
+            <div class="pc-badge">⭐ La más pedida</div>
+            <div class="pc-desc">Quesos, vegetales, carne, tocino, jamón de pierna, pechuga de pollo, guacamole y papas corte gajo</div>
+            <div class="pc-price">$85</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('h-lapa','Hamburguesa LAPA',85)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍔</div>
+          <div class="pc-body">
+            <div class="pc-name">Pechuga Crispy</div>
+            <div class="pc-price">$85</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('h-crispy','Pechuga Crispy',85)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- COMIDAS PRINCIPALES -->
+      <h3 class="subsection-title" style="margin-top:40px">COMIDAS PRINCIPALES</h3>
+      <div class="products-grid">
+        <div class="product-card product-card--big" data-cat="food">
+          <div class="pc-icon">🥩</div>
+          <div class="pc-body">
+            <div class="pc-name">Arrachera Steak</div>
+            <div class="pc-desc">Filete de arrachera de 340 gr con frijoles, cebollitas, guacamole, salsa de chile de árbol, totopos y tortillas</div>
+            <div class="pc-price">$160</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('arrachera-s','Arrachera Steak',160)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--big" data-cat="food">
+          <div class="pc-icon">🍗</div>
+          <div class="pc-body">
+            <div class="pc-name">Pechuga a la Plancha</div>
+            <div class="pc-desc">Pechuga de pollo de 340 gr con vegetales, guacamole y papas gajo</div>
+            <div class="pc-price">$160</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('pechuga-p','Pechuga a la Plancha',160)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--big product-card--hot" data-cat="food">
+          <div class="pc-icon">🍖</div>
+          <div class="pc-body">
+            <div class="pc-name">Platón LAPA</div>
+            <div class="pc-badge">🏆 Estrella de la casa</div>
+            <div class="pc-desc">Arrachera, pechuga a la plancha, chistorra, chorizo, guacamole, totopos y sincronizadas. Con salsa de chile de árbol y salsa macha</div>
+            <div class="pc-price">$375</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('platon-lapa','Platón LAPA',375)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- SÁNDWICHES -->
+      <h3 class="subsection-title" style="margin-top:40px">SÁNDWICHES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🥪</div>
+          <div class="pc-body">
+            <div class="pc-name">Artesano de Jamón y Vegetales</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('s-artesano','Artesano de Jamón y Vegetales',50)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🥪</div>
+          <div class="pc-body">
+            <div class="pc-name">Club Sándwich</div>
+            <div class="pc-desc">Vegetales, quesos, jamón, tocino y pechuga a la plancha. Acompañado de papas a la francesa</div>
+            <div class="pc-price">$85</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('s-club','Club Sándwich',85)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- MOLLETES -->
+      <h3 class="subsection-title" style="margin-top:40px">MOLLETES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🫓</div>
+          <div class="pc-body">
+            <div class="pc-name">Molletes de Jamón y Tocino</div>
+            <div class="pc-desc">Con chimichurri, frijoles, queso gouda, jamón de pierna, tocino, aguacate y pico de gallo</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('molletes','Molletes de Jamón y Tocino',80)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- BAGUETTE -->
+      <h3 class="subsection-title" style="margin-top:40px">BAGUETTE</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🥖</div>
+          <div class="pc-body">
+            <div class="pc-name">Baguette Mexicano</div>
+            <div class="pc-desc">Con chimichurri, frijoles, queso gouda, queso americano, vegetales y salsa macha</div>
+            <div class="pc-price">$85</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('baguette','Baguette Mexicano',85)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- ESPECIALES -->
+      <h3 class="subsection-title" style="margin-top:40px">ESPECIALES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🌯</div>
+          <div class="pc-body">
+            <div class="pc-name">Sincronizada Especial</div>
+            <div class="pc-desc">Tortilla de harina giga con aderezo, queso gouda, vegetales, guacamole, jamón y tocino</div>
+            <div class="pc-price">$65</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('sincro','Sincronizada Especial',65)">+ Agregar</button>
+        </div>
+        <!-- Nachos con variante -->
+        <div class="product-card product-card--variant" data-cat="food">
+          <div class="pc-icon">🌽</div>
+          <div class="pc-body">
+            <div class="pc-name">Nachos</div>
+            <div class="pc-desc">Totopos de maíz con frijoles refritos, queso cheddar, crema, pico de gallo y jalapeño</div>
+          </div>
+          <button class="btn-add btn-variant" onclick="openVariantModal('nachos','Nachos',0,[{label:'Regular',price:75},{label:'Pechuga de Pollo',price:85},{label:'Arrachera',price:95}])">Elegir</button>
+        </div>
+        <!-- Burritos con variante -->
+        <div class="product-card product-card--variant" data-cat="food">
+          <div class="pc-icon">🌯</div>
+          <div class="pc-body">
+            <div class="pc-name">Burrito</div>
+            <div class="pc-desc">Tortilla de harina rellena con queso gouda, vegetales y aderezo</div>
+          </div>
+          <button class="btn-add btn-variant" onclick="openVariantModal('burrito','Burrito',0,[{label:'Pechuga a la Plancha',price:90},{label:'Arrachera',price:90}])">Elegir</button>
+        </div>
+      </div>
+
+      <!-- SNACKS / COMPLEMENTOS -->
+      <h3 class="subsection-title" style="margin-top:40px">COMPLEMENTOS Y SNACKS</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍟</div>
+          <div class="pc-body">
+            <div class="pc-name">Papas a la Francesa</div>
+            <div class="pc-price">$70</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('papas-f','Papas a la Francesa',70)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍟</div>
+          <div class="pc-body">
+            <div class="pc-name">Papas con Queso</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('papas-q','Papas con Queso',80)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍟</div>
+          <div class="pc-body">
+            <div class="pc-name">Papas Gajo</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('papas-g','Papas Gajo',80)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🥩</div>
+          <div class="pc-body">
+            <div class="pc-name">Butifarra</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('butifarra','Butifarra',80)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🥜</div>
+          <div class="pc-body">
+            <div class="pc-name">Cacahuates</div>
+            <div class="pc-price">$35</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cacahuates','Cacahuates',35)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🫒</div>
+          <div class="pc-body">
+            <div class="pc-name">Aceitunas</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('aceitunas','Aceitunas',50)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍒</div>
+          <div class="pc-body">
+            <div class="pc-name">Cerezas</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cerezas','Cerezas',50)">+ Agregar</button>
+        </div>
+      </div>
+
+      <!-- POSTRES -->
+      <h3 class="subsection-title" style="margin-top:40px">POSTRES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🍰</div>
+          <div class="pc-body">
+            <div class="pc-name">Choco Flan</div>
+            <div class="pc-desc">Postre en rebanada</div>
+            <div class="pc-price">$40</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('chocoflan','Choco Flan',40)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="food">
+          <div class="pc-icon">🧁</div>
+          <div class="pc-body">
+            <div class="pc-name">Muffins de Vainilla y Chocolate</div>
+            <div class="pc-price">$15</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('muffins','Muffins de Vainilla y Chocolate',15)">+ Agregar</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─────────────────────────── 🍗 ALITAS ─────── -->
+    <section class="menu-section hidden" data-cat="wings" id="sec-wings">
+
+      <div class="menu-section-header">
+        <span class="msh-icon">🍗</span>
+        <div>
+          <h2 class="msh-title">ALITAS CROCANTES <span class="title-quote">"WINGS"</span></h2>
+          <p class="msh-sub">Elige tu tamaño y tu salsa favorita</p>
+        </div>
+      </div>
+
+      <!-- SELECTOR DE SALSA -->
+      <div class="sauce-selector">
+        <p class="sauce-label">🌶️ Elige tu salsa favorita:</p>
+        <div class="sauce-grid">
+          <div class="sauce-group">
+            <div class="sauce-group-title">🔥 Picantes</div>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Queso Habanero" checked> Queso Habanero</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Kiwi Habanero"> Kiwi Habanero</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Búfalo"> Búfalo</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Explosivas"> Explosivas</label>
+          </div>
+          <div class="sauce-group">
+            <div class="sauce-group-title">🍯 Dulces</div>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Mostaza Hot"> Mostaza Hot</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Mango Habanero"> Mango Habanero</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="BBQ"> BBQ</label>
+            <label class="sauce-pill"><input type="radio" name="sauce" value="Miel Mostaza"> Miel Mostaza</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" style="margin-top:24px">
+        <div class="product-card product-card--wings" data-cat="wings">
+          <div class="pc-icon">🍗</div>
+          <div class="pc-body">
+            <div class="pc-name">Alitas — 5 piezas</div>
+            <div class="pc-desc">Crocantes al horno con tu salsa favorita</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" id="btn-wings-5" onclick="addWingsToCart('wings-5','Alitas 5 piezas',80)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--wings product-card--hot" data-cat="wings">
+          <div class="pc-icon">🍗</div>
+          <div class="pc-body">
+            <div class="pc-name">Alitas — 10 piezas</div>
+            <div class="pc-badge">💥 Mejor valor</div>
+            <div class="pc-desc">Para compartir, con la salsa que tú elijas</div>
+            <div class="pc-price">$160</div>
+          </div>
+          <button class="btn-add" id="btn-wings-10" onclick="addWingsToCart('wings-10','Alitas 10 piezas',160)">+ Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── 🍻 BARRA LIBRE ─────── -->
+    <section class="menu-section hidden" data-cat="bar" id="sec-bar">
+
+      <div class="menu-section-header">
+        <span class="msh-icon">🍻</span>
+        <div>
+          <h2 class="msh-title">BARRA LIBRE</h2>
+          <p class="msh-sub">Cervezas, cócteles y bebidas refrescantes</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">CERVEZAS</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍺</div>
+          <div class="pc-body">
+            <div class="pc-name">Cerveza Nacional</div>
+            <div class="pc-price">$50</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cerv-nac','Cerveza Nacional',50)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍺</div>
+          <div class="pc-body">
+            <div class="pc-name">Cerveza Importada</div>
+            <div class="pc-price">$60</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('cerv-imp','Cerveza Importada',60)">+ Agregar</button>
+        </div>
+      </div>
+
+      <h3 class="subsection-title" style="margin-top:40px">MICHELADAS</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍺</div>
+          <div class="pc-body">
+            <div class="pc-name">Michelada Clásica</div>
+            <div class="pc-desc">Cerveza con limón, sal y clamato</div>
+            <div class="pc-price">$60</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('miche-c','Michelada Clásica',60)">+ Agregar</button>
+        </div>
+        <div class="product-card product-card--hot" data-cat="bar">
+          <div class="pc-icon">🍺</div>
+          <div class="pc-body">
+            <div class="pc-name">Michelada Cubana</div>
+            <div class="pc-badge">🔥 Picante</div>
+            <div class="pc-desc">Con clamato, chile y chamoy</div>
+            <div class="pc-price">$65</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('miche-cub','Michelada Cubana',65)">+ Agregar</button>
+        </div>
+      </div>
+
+      <h3 class="subsection-title" style="margin-top:40px">CÓCTELES</h3>
+      <div class="products-grid">
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍹</div>
+          <div class="pc-body">
+            <div class="pc-name">Mojito Clásico</div>
+            <div class="pc-desc">Menta, limón, azúcar, ron y hielo</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('mojito','Mojito Clásico',80)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍓</div>
+          <div class="pc-body">
+            <div class="pc-name">Mojito de Fresa</div>
+            <div class="pc-desc">Fresas frescas, menta y ron</div>
+            <div class="pc-price">$85</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('mojito-f','Mojito de Fresa',85)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">🍷</div>
+          <div class="pc-body">
+            <div class="pc-name">Sangría</div>
+            <div class="pc-desc">Vino tinto con frutas de temporada</div>
+            <div class="pc-price">$80</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('sangria','Sangría',80)">+ Agregar</button>
+        </div>
+        <div class="product-card" data-cat="bar">
+          <div class="pc-icon">💧</div>
+          <div class="pc-body">
+            <div class="pc-name">Agua Mineral</div>
+            <div class="pc-price">$30</div>
+          </div>
+          <button class="btn-add" onclick="addToCart('agua-m','Agua Mineral',30)">+ Agregar</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══ -->
+  <footer>
+    <div class="footer-logo">LAPA <span style="font-size:.9rem;font-weight:400;color:var(--text-muted)">Café · Lounge</span></div>
+    <div class="footer-links">
+      <a href="https://wa.me/529631337896" target="_blank">WhatsApp</a>
+    </div>
+    <div class="divider"></div>
+    <p>© 2026 LAPA Café-Lounge · Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ═══════════════════════════════ FAB CARRITO ═══ -->
+  <button class="fab-cart" id="fabCart" style="display:none" aria-label="Ver carrito">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.99-1.81l1.54-9.19H6"/>
+    </svg>
+    <span class="fab-badge" id="fabBadge">0</span>
+  </button>
+
+  <!-- ═══════════════════════════════ MODAL VARIANTE ═══ -->
+  <div class="modal-overlay" id="variantOverlay">
+    <div class="modal variant-modal" id="variantModal">
+      <button class="modal-close" onclick="closeVariantModal()">✕</button>
+      <h3 class="modal-title" id="variantTitle">Elige tu opción</h3>
+      <div class="variant-options" id="variantOptions"></div>
+      <div class="modal-qty-row">
+        <span class="qty-label">Cantidad:</span>
+        <div class="qty-ctrl">
+          <button onclick="changeVariantQty(-1)">−</button>
+          <span id="variantQty">1</span>
+          <button onclick="changeVariantQty(1)">+</button>
+        </div>
+        <span class="qty-subtotal" id="variantSubtotal">$0</span>
+      </div>
+      <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="confirmVariant()">
+        Agregar al carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ MODAL CARRITO ═══ -->
+  <div class="modal-overlay" id="cartOverlay">
+    <div class="modal cart-modal" id="cartModal">
+      <div class="cart-header">
+        <div class="cart-header-left">
+          <img src="icono-flotante.png" alt="LAPA" style="width:32px;height:32px;object-fit:contain" />
+          <h2>Tu Pedido</h2>
+        </div>
+        <button class="modal-close" onclick="closeCartModal()">✕</button>
+      </div>
+
+      <!-- Lista de items -->
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">
+        <span style="font-size:2.5rem">🛒</span>
+        <p>Tu carrito está vacío</p>
+      </div>
+
+      <!-- Separador -->
+      <div class="cart-divider"></div>
+
+      <!-- Mesa -->
+      <div class="cart-location">
+        <p class="cart-location-title">🪑 ¿En qué mesa estás?</p>
+        <div class="mesa-input-wrap" id="mesaInputWrap">
+          <input type="number" id="mesaNum" min="1" max="50" placeholder="Número de mesa" class="mesa-input" />
+        </div>
+
+      </div>
+
+      <!-- Error mesa -->
+      <div class="cart-error" id="cartError"></div>
+
+      <!-- Notas -->
+      <div class="cart-notes-wrap">
+        <label class="cart-notes-label" for="cartNotes">📝 Notas extra (opcional):</label>
+        <textarea id="cartNotes" class="cart-notes" placeholder="Ej: sin picante, extra salsa, etc." rows="2"></textarea>
+      </div>
+
+      <!-- Total -->
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span class="cart-total-price" id="cartTotal">$0</span>
+      </div>
+
+      <!-- Botón enviar -->
+      <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:1rem;padding:16px" id="btnSendWA" onclick="sendToWhatsApp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.853L.057 23.804l6.107-1.603A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.006-1.371l-.358-.214-3.724.977.994-3.634-.233-.374A9.771 9.771 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Enviar pedido por WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- Icono flotante -->
+  <img src="icono-flotante.png" alt="LAPA" class="floating-icon" id="floatingIcon" title="¡Bienvenido a ,LAPA!" />
+
+  <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* ================================================================
+   LAPA Café-Lounge — Estilos Compartidos
+   Paleta: Negro profundo + Blanco + Dorado mostaza
+================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ── Reset y base ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --gold:        #C89B3C;
+  --gold-light:  #E0B454;
+  --gold-dark:   #A07828;
+  --black:       #0B0B0B;
+  --surface:     #141414;
+  --surface2:    #1E1E1E;
+  --surface3:    #272727;
+  --border:      #2C2C2C;
+  --text:        #F2F2F2;
+  --text-muted:  #888;
+  --red:         #E05252;
+  --radius:      4px;
+  --radius-lg:   6px;
+  --shadow:      0 8px 40px rgba(0,0,0,.7);
+  --transition:  .25s cubic-bezier(.4,0,.2,1);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Raleway', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ── Utilidades ── */
+.gold        { color: var(--gold); }
+.text-center { text-align: center; }
+.text-muted  { color: var(--text-muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .82rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(200,155,60,.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Scrollbar personalizado ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+/* ── Icono flotante (mascota) ── */
+.floating-icon {
+  position: fixed;
+  bottom: 28px;
+  left: 24px;
+  width: 64px;
+  height: 64px;
+  z-index: 900;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 12px rgba(200,155,60,.5));
+  transition: transform .3s ease;
+  animation: float-bob 3s ease-in-out infinite;
+}
+.floating-icon:hover { transform: scale(1.15); }
+
+@keyframes float-bob {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 40px 20px 24px;
+  text-align: center;
+}
+footer .footer-logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+footer p { color: var(--text-muted); font-size: .85rem; }
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+footer .footer-links a {
+  color: var(--text-muted);
+  font-size: .85rem;
+  transition: color var(--transition);
+}
+footer .footer-links a:hover { color: var(--gold); }
+footer .divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px auto;
+  max-width: 400px;
+}
